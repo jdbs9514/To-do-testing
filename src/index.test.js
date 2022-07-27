@@ -9,6 +9,7 @@ import { adding } from './modules/add.js';
 document.body.innerHTML = `
 <input type="text" id="input" value ='Adding things' >
 <ul class= 'list'></ul>`
+
 describe('We are testing the Add function', () => {
     test(' add one task in list ', () => {
         adding();
@@ -20,10 +21,15 @@ describe('We are testing the Add function', () => {
         expect(displayList.children.length).toBe(1);
     });
 });
-// describe('We are testing the remove function', () => {
-//     test(' remove one task in list ', () => {
-//         displaytask();
-//         expect(JSON.parse(localStorage.baseData).length).toBe(1);
 
-//     });
-// });
+describe('We are testing the remove function', () => {
+    test('remove the task in list', () => {
+        const removeicon = document.querySelector('.remove');
+        removeicon.click();
+        expect(JSON.parse(localStorage.baseData).length).toBe(0);
+    });
+    test('remove the task from HTML', () => {
+        const displayList = document.querySelector('.list');
+        expect(displayList.children.length).toBe(0);
+    });
+});
