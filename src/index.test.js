@@ -3,12 +3,14 @@
  */
 import displaytask from './modules/DisplayTask.js';
 import adding from './modules/add.js';
+import edit from './modules/Edittask.js';
 
 // setting up html enviroment
 
 document.body.innerHTML = `
 <input type="text" id="input" value ='Adding things' >
 <ul class= 'list'></ul>`;
+
 
 describe('We are testing the Add function', () => {
   test(' add one task in list ', () => {
@@ -32,4 +34,17 @@ describe('We are testing the remove function', () => {
     const displayList = document.querySelector('.list');
     expect(displayList.children.length).toBe(0);
   });
+});
+
+describe('We are testing the edit function', () => {
+  test('edit the task in list', () => {
+    adding();
+    displaytask();
+    const editTask = document.querySelector('.span');
+    editTask.value = 'editText';
+    edit(editTask);
+
+    expect(JSON.parse(localStorage.getItem('baseData'))[0].description).toBe('editText');
+  });
+  
 });
