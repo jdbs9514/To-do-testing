@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4dc3d7e55b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>To do List</title>
+</head>
+
+<body>
+    <section class="to-do-list">
+        <h1 id="header">Today's to do
+            <button id="refresh" type="button">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </h1>
+        <form id="form">
+            <input type="text" id="input" placeholder="Add to your list.." required>
+            <button id="arrow" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <div id="items">
+             <ul class="list">
+
+             </ul>   
+        </div>
+        <button id="clear" type="button">Clear All Complete</button>
+    </section>    
+</body>
+</html>
