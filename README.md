@@ -2,7 +2,7 @@
 
 ## To-do-testing
 
-the target of this project is to implement a automatic testing to know if your code is work.
+the target of this project is to implement an automatic testing to know if your code is work with jest.
 ## Description
 
 This is the first testing project with jest and simulated the html with jest-environment-jsdom to testing some many instance of the code.
