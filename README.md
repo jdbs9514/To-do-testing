@@ -3,6 +3,7 @@
 ## To-do-testing
 
 In this code we use jest to make an automatic testing the code and show if the code work.
+the target of this project is to implement an automatic testing to know if your code is work with jest.
 ## Description
 
 This is the first testing project with jest and simulated the html with jest-environment-jsdom to testing some many instance of the code.
@@ -14,6 +15,7 @@ This is the first testing project with jest and simulated the html with jest-env
 - javaScript
 - jest (test tool)
 - webpack
+
 ## Authors
 
 - Josué Benavides
