@@ -5,6 +5,8 @@ import displaytask from './modules/DisplayTask.js';
 import adding from './modules/add.js';
 import edit from './modules/Edittask.js';
 
+
+
 // setting up html enviroment
 
 document.body.innerHTML = `
@@ -46,5 +48,17 @@ describe('We are testing the edit function', () => {
 
     expect(JSON.parse(localStorage.getItem('baseData'))[0].description).toBe('editText');
   });
-  
+
+});
+
+describe('we are testing the status of the task', () => {
+  test('status changes', () => {
+
+    const statusTask = document.querySelector('.check');
+    statusTask.click();
+    expect(statusTask.checked).toBe(true);
+  });
+  test('status to local storage', () => {
+    expect(JSON.parse(localStorage.baseData)[0].completed).toBe(true);
+  })
 });
