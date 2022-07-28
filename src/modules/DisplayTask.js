@@ -1,7 +1,8 @@
-export default function displaytask() {
-  const dataBase = JSON.parse(localStorage.getItem('baseData'));
+export default (clearButton) => {
+  let dataBase = JSON.parse(localStorage.getItem('baseData'));
 
   const unsortedList = document.querySelector('.list');
+  unsortedList.innerHTML = "";
 
   for (let i = 0; i < dataBase.length; i += 1) {
     const list = document.createElement('li');
@@ -46,12 +47,22 @@ export default function displaytask() {
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         dataBase[i].completed = true;
-        alert('Task completed');
       } else {
         dataBase[i].completed = false;
-        alert('Here we go!');
       }
       localStorage.setItem('baseData', JSON.stringify(dataBase));
+    });
+
+    clearButton.addEventListener('click', () => {
+      if (checkbox.checked && true) {
+        dataBase = JSON.parse(localStorage.getItem('baseData'));
+        dataBase = dataBase.filter((task) => !task.completed);
+        list.remove();
+        for (let i = 0; i < dataBase.length; i += 1) {
+          dataBase[i].index = i + 1;
+        }
+        localStorage.setItem('baseData', JSON.stringify(dataBase));
+      }
     });
   }
 }
