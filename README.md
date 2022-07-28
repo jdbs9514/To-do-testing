@@ -1,14 +1,19 @@
-## To-do-testing
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+
+## To-do-testing
+
+In this code we use jest to make an automatic testing the code and show if the code work.
 ## Description
 
 This is the first testing project with jest and simulated the html with jest-environment-jsdom to testing some many instance of the code.
 
 ## Built with :
 
+- Html
+- Css
 - javaScript
-- jest 
-
+- jest (test tool)
+- webpack
 ## Authors
 
 - Josué Benavides
