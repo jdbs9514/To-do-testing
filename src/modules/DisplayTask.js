@@ -1,8 +1,10 @@
+/* eslint-disable no-loop-func  */
+
 export default (clearButton) => {
   let dataBase = JSON.parse(localStorage.getItem('baseData'));
 
   const unsortedList = document.querySelector('.list');
-  unsortedList.innerHTML = "";
+  unsortedList.innerHTML = '';
 
   for (let i = 0; i < dataBase.length; i += 1) {
     const list = document.createElement('li');
@@ -41,6 +43,7 @@ export default (clearButton) => {
           newInput.description = span.value;
         }
       });
+
       localStorage.setItem('baseData', JSON.stringify(dataBase));
     });
 
@@ -65,4 +68,4 @@ export default (clearButton) => {
       }
     });
   }
-}
+};
